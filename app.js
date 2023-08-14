@@ -11,12 +11,12 @@ app.use(express.json());
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to the Bookmarks App");
+  res.send("Welcome to the Videogames App");
 });
 
-// Bookmarks ROUTES
-const bookmarksController = require("./controllers/bookmarkController.js");
-app.use("/bookmarks", bookmarksController);
+// Videogames ROUTES
+const videogamesController = require("./controllers/videogamesController.js");
+app.use("/videogames", videogamesController);
 
 // 404 PAGE
 app.get("*", (req, res) => {

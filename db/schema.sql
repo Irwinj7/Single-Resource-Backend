@@ -1,25 +1,25 @@
-DROP DATABASE IF EXISTS bookmarks_dev;
-CREATE DATABASE bookmarks_dev;
+DROP DATABASE IF EXISTS videogames_dev;
+CREATE DATABASE videogames_dev;
 
-\c bookmarks_dev;
+\c videogames_dev;
 
-CREATE TABLE bookmarks (
- id SERIAL PRIMARY KEY,
+CREATE TABLE videogames (
+ id NUMERIC,
  name TEXT NOT NULL,
  url TEXT,
- category TEXT,
+ genre TEXT,
  is_favorite BOOLEAN
 );
 
-DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS abouts;
 
-CREATE TABLE reviews (
- id SERIAL PRIMARY KEY,
- reviewer TEXT,
- title TEXT,
- content TEXT,
- rating NUMERIC,
- CHECK (rating >= 0 AND rating <= 5),
- bookmark_id INTEGER REFERENCES bookmarks (id)
+CREATE TABLE abouts (
+ app_id NUMERIC,
+ app_type TEXT,
+ publisher TEXT,
+ last_change NUMERIC,
+ last_update TEXT,
+ release_date TEXT,
+ videogame_id INTEGER REFERENCES videogames(id)
  ON DELETE CASCADE
 );
