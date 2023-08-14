@@ -3,8 +3,10 @@ CREATE DATABASE videogames_dev;
 
 \c videogames_dev;
 
+DROP TABLE IF EXISTS videogames;
+
 CREATE TABLE videogames (
- id NUMERIC,
+ id SERIAL PRIMARY KEY,
  name TEXT NOT NULL,
  url TEXT,
  genre TEXT,
