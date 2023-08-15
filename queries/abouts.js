@@ -3,7 +3,7 @@ const db = require("../db/dbConfig.js");
 const getAllAbouts = async (videogame_id) => {
     try {
     const allAbouts = await db.any(
-    "SELECT * FROM abouts WHERE app_id=$1",
+    "SELECT * FROM abouts WHERE videogame_id=$1",
     videogame_id
     );
     return allAbouts;

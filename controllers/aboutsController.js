@@ -13,6 +13,7 @@ const {
 // INDEX
 abouts.get("/", async (req, res) => {
     const { videogameId } = req.params;
+    
     try {
       const allAbouts = await getAllAbouts(videogameId);
       res.json(allAbouts);

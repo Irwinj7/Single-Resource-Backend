@@ -10,7 +10,7 @@ const {
 } = require("../queries/videogames");
 const { checkName, checkBoolean, validateURL } = require("../validations/checkVideogames.js");
 const aboutsController = require("./aboutsController.js");
-videogames.use("/:videogamesId/abouts", aboutsController);
+videogames.use("/:videogameId/abouts", aboutsController);
 
 // INDEX
 videogames.get("/", async (req, res) => {

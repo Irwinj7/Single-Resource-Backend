@@ -16,7 +16,7 @@ CREATE TABLE videogames (
 DROP TABLE IF EXISTS abouts;
 
 CREATE TABLE abouts (
- app_id NUMERIC,
+ id SERIAL PRIMARY KEY,
  app_type TEXT,
  publisher TEXT,
  last_change NUMERIC,
