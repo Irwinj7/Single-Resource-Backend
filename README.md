@@ -1,0 +1,4 @@
+Hello! This is the backend for the Single Resource Project. This was created by sourcing information from Steam ('https://steamdb.info/charts/') where they list out very broad data for every video game on their platform. I have included 17 games in the seed.sql file to start the project off, but feel free to add as many as you would like. 
+The BASEURL for this backend is 'https://single-resource-backend.onrender.com/'. To take a look at all video games at once add '...videogames' and to look up a certain video game write 'BASEURL/videogames/videogameId'. in addition each game has a more in depth look, which can be view by typing 'BASEURL/videogames/videogameId/abouts'.
+This will be connected to a frontend via Jerry Johns frontend part of this project.
+Thank You!
